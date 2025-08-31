@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LC-Streetfashion</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>LC-Streetfashion</h1>
+    <div class="menu-btn" onclick="toggleMenu()">☰ Menü</div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h2>Kategorien</h2>
+    <ul>
+      <li>
+        <a onclick="toggleSubmenu('damenSub')">Damen ▾</a>
+        <ul class="submenu" id="damenSub">
+          <li><a href="damen-alles.html">Alles</a></li>
+          <li><a href="damen-hosen.html">Hosen</a></li>
+          <li><a href="damen-shirts.html">T-Shirts</a></li>
+          <li><a href="damen-hoodies.html">Hoodies</a></li>
+          <li><a href="damen-westen.html">Westen</a></li>
+          <li><a href="damen-jacken.html">Jacken</a></li>
+          <li><a href="damen-schuhe.html">Schuhe</a></li>
+        </ul>
+      </li>
+      <li>
+        <a onclick="toggleSubmenu('herrenSub')">Herren ▾</a>
+        <ul class="submenu" id="herrenSub">
+          <li><a href="herren-alles.html">Alles</a></li>
+          <li><a href="herren-hosen.html">Hosen</a></li>
+          <li><a href="herren-shirts.html">T-Shirts</a></li>
+          <li><a href="herren-hoodies.html">Hoodies</a></li>
+          <li><a href="herren-westen.html">Westen</a></li>
+          <li><a href="herren-jacken.html">Jacken</a></li>
+          <li><a href="herren-schuhe.html">Schuhe</a></li>
+        </ul>
+      </li>
+      <li><a href="accessories-alles.html">Accessoires</a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+  <!-- Product Grid -->
+  <section class="products">
+    <div class="product">
+      <img src="https://static.bershka.net/assets/public/ff24/275f/501549c3a365/222687882f73/07382498500-a4o/07382498500-a4o.jpg?ts=1753883202719&w=800" alt="Produkt 1">
+      <h3>Hoodie</h3>
+      <p>€42</p>
+    </div>
+    <div class="product">
+      <img src="https://static.bershka.net/assets/public/1881/3a92/e698469e8ebf/3e96034d6b12/07042498810-a4o/07042498810-a4o.jpg?ts=1751363464015&w=800" alt="Produkt 2">
+      <h3>Weste-Washed Optik</h3>
+      <p>€42</p>
+    </div>
+    <div class="product">
+      <img src="https://pesoclo.com/cdn/shop/files/slimeagleblack_750x.jpg?v=1756118053" alt="Produkt 3">
+      <h3>Basic T-Shirt</h3>
+      <p>€40</p>
+    </div>
+    <div class="product">
+      <img src="https://static.bershka.net/assets/public/e851/4bb9/37c54875b34f/6bde05026291/05355534800-a4o/05355534800-a4o.jpg?ts=1754317191811&w=800" alt="Produkt 4">
+      <h3>Loose Baggy Jeans</h3>
+      <p>€43</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Joah, das war's erst mal soweit</br> Falls du noch Wünsche oder so hast einfach nh Email schreiben.</br> Wäre ganz nice.</h2>
+    <ul>
+      <li><a href="#">Q&A</a></li>
+      <li><a href="#">Datenschutz</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="mailto:anlule9@gmail.com">Kontakt</a></li>
+    </ul>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('sidebar').classList.toggle('active');
+      document.getElementById('overlay').classList.toggle('active');
+    }
+    function closeMenu() {
+      document.getElementById('sidebar').classList.remove('active');
+      document.getElementById('overlay').classList.remove('active');
+    }
+    function toggleSubmenu(id) {
+      const submenu = document.getElementById(id);
+      submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+</html>
